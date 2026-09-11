@@ -1,0 +1,198 @@
+Package: datui
+Version: 0.3.2-1
+Architecture: amd64
+Maintainer: Derek Wisong
+Installed-Size: 72948
+Depends: libfontconfig1
+Filename: ./datui_0.3.2-1_amd64.deb
+Size: 16679660
+MD5sum: edd9cb25515ae20ead7382ca1e94085b
+SHA1: 095351faef7ea1ebbb6024ecfbbd1df229a6d5e0
+SHA256: d5f7aec4104f8d511cc81d4592bffdc172490a9bacda11cb0544d774dff72e7c
+Priority: optional
+Homepage: https://derekwisong.github.io/datui
+Description: Data Exploration in the Terminal
+ # Datui
+ .
+ ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+ ![Version](https://img.shields.io/badge/version-0.3.2-orange.svg)
+ ![Rust](https://img.shields.io/badge/rust-1.89.0+-orange.svg)
+ ![Downloads](https://img.shields.io/github/downloads/derekwisong/datui/total?style=flat-square&logo=github&color=blue)
+ ![PyPI
+ Downloads](https://img.shields.io/pypi/dm/datui?style=flat-square&logo=pypi&logoColor=white&color=blue)
+ ![GitHub
+ Stars](https://img.shields.io/github/stars/derekwisong/datui?style=flat-square&logo=github&color=blue)
+ [![CI](https://img.shields.io/github/actions/workflow/status/derekwisong/datui/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white)](https://github.com/derekwisong/datui/actions)
+ .
+ .
+ **Datui** is a high-performance terminal UI for exploring and analyzing tabular
+ datasets.
+ .
+ 📖 **Documentation**: [Full User Guide][docs].
+ .
+ ## Demo
+ .
+ ![Overview Demo](demos/11-overview.gif)
+ .
+ ## Features
+ .
+ - 🚀 **Fast**: Powered by Polars streaming expressions for state-of-the-art
+ performance on
+   massive datsets
+ - 📁 **Universal**: Supports Parquet, CSV, JSON, Avro, Arrow, ORC, and Excel
+ - 🧰 **Flexible**: View data stored locally, on S3, or over HTTP/HTTPS
+ - 🔍 **Queryable**: Fuzzy keyword search and SQL queries
+ - 📊 **Charts**: Render terminal-based charts and export them as images
+ - 🔬 **Analysis**: Integrated analytical tools reveal correlations,
+ distributions, and more
+ - ⚒️ **Transformations**: Sort, filter, pivot, melt, and group
+ - ⌨️ **Keyboard-Driven**: Arrow keys and Vim-style navigation
+ (`h`/`j`/`k`/`l`)
+ .
+ .
+ ## Installation
+ .
+ > Visit the [Install Guide][install-guide] for additional installation details
+ .
+ ### ✨ Quick Install for Linux and macOS
+ .
+ ```bash
+ curl -fsSL
+ https://raw.githubusercontent.com/derekwisong/datui/main/scripts/install/install.sh
+ | sh
+ ```
+ **or via cargo:**
+ ```
+ cargo install datui
+ ```
+ *Don't like piping to shell? See the alternative methods below.*
+ .
+ ### Pre-built Releases
+ .
+ Get the pre-built binary for your platform from the [Latest
+ Release](https://github.com/derekwisong/datui/releases/latest).
+ .
+ ### Package Managers
+ .
+ > See [Package Managers][pkg-managers]
+ .
+ - **Arch Linux (AUR)**:
+   ```bash
+   paru -S datui-bin
+   ```
+ - **macOS (Homebrew)**:
+   ```bash
+   brew tap derekwisong/datui
+   brew trust derekwisong/datui
+   brew install datui
+   ```
+ - **Windows (WinGet)**:
+   ```powershell
+   winget install derekwisong.datui
+   ```
+ - **Pip** (See [Python Module][python-module]):
+   ```
+   pip install datui
+   ```
+ .
+ .
+ ### From Source
+ .
+ > See [Compiling][compiling]
+ .
+ ```bash
+ git clone https://github.com/derekwisong/datui.git
+ cd datui
+ cargo build --release --locked
+ ```
+ .
+ The binary will be available at `target/release/datui`.
+ .
+ .
+ ## Quick Start
+ .
+ > See the [Quick Start Guide][quickstart-guide]
+ .
+ - 💻 Load a file, or hive-partitioned dataset, from the shell:
+   ```bash
+   datui /path/to/data.parquet
+   datui --hive /path/to/directory
+   datui --hive "/path/to/directory/**/*.parquet"
+   ```
+   > See [Loading Data][loading-data]
+ - ☁️ Load data from **S3** and **HTTP**:
+   ```bash
+   datui s3://some-bucket/file.parquet
+   datui gs://some-bucket/file.parquet
+   datui https://www.domain.com/file.csv
+   ```
+   > See [Loading Remote Data][loading-remote]
+ - 🐍 View data from Python:
+   ```python
+   import polars as pl
+   import datui
+ .
+   lf = pl.scan_parquet("/path/to/data.parquet")
+   datui.view(lf)
+   ```
+   > See [Python Module][python-module]
+ - Use arrow keys or Vim-style keybinds (`h`/`j`/`k`/`l`) to navigate
+ - Press `q` to exit
+ .
+ > 💡 Use `?` or `F1` to show help
+ .
+ .
+ ## Configuration
+ .
+ > See the [Configuration Guide][config-guide]
+ .
+ Generate a default [TOML](https://toml.io) config file:
+ ```bash
+ datui --generate-config
+ ```
+ .
+ ## For Developers
+ .
+ ### Setup
+ .
+ See the [Setup Script][setup-script] guide to quickly get configured.
+ .
+ ### Contributing
+ .
+ Contributions are welcome! Please see [Contributing][contributing] for more.
+ .
+ ## License
+ .
+ This project is licensed under the MIT License - see the [LICENSE](LICENSE)
+ file for details.
+ .
+ ---
+ .
+ > If you encounter any issues or have feature requests, please
+ > [open an issue on  GitHub](https://github.com/derekwisong/datui/issues).
+ >
+ > Found a security problem? Please report it privately instead. See
+ > [SECURITY.md](SECURITY.md).
+ .
+ [docs]: https://derekwisong.github.io/datui/
+ [config-guide]:
+ https://derekwisong.github.io/datui/latest/user-guide/configuration.html
+ [install-guide]:
+ https://derekwisong.github.io/datui/latest/getting-started/installation.html
+ [quickstart-guide]:
+ https://derekwisong.github.io/datui/latest/getting-started/quick-start.html
+ [pkg-managers]:
+ https://derekwisong.github.io/datui/latest/getting-started/installation.html#package-managers
+ [compiling]:
+ https://derekwisong.github.io/datui/latest/getting-started/installation.html#compiling-from-source
+ [contributing]:
+ https://derekwisong.github.io/datui/latest/for-developers/contributing.html
+ [setup-script]:
+ https://derekwisong.github.io/datui/latest/for-developers/setup-script.html
+ [python-module]:
+ https://derekwisong.github.io/datui/latest/user-guide/python-module.html
+ [loading-remote]:
+ https://derekwisong.github.io/datui/latest/user-guide/loading-data.html#remote-data-s3-gcs-and-http
+ [loading-data]:
+ https://derekwisong.github.io/datui/latest/user-guide/loading-data.html
+
