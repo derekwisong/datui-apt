@@ -1,0 +1,38 @@
+Package: datui
+Version: 0.4.14-1
+Architecture: arm64
+Maintainer: Derek Wisong
+Installed-Size: 96799
+Depends: libc6 (>= 2.28)
+Filename: ./datui_0.4.14-1_arm64.deb
+Size: 22970248
+MD5sum: f1dedbfd5364c0cef006e63e75c2f994
+SHA1: 6d65b86bc7ef59bd0b456a29b966958073565c44
+SHA256: b47ed28e0b63233ce46ba1aa02d93f229fd08874b5423667e20a1ffdf22a1c5e
+Priority: optional
+Homepage: https://derekwisong.github.io/datui
+Description: Explore tabular data in your terminal: Parquet, CSV, JSON and more
+ Parquet, CSV, JSON, Arrow, Excel, SQLite, logs, audio, model files and more,
+ including binary formats you describe in a format spec. On disk or in S3, GCS,
+ Azure and HTTP(S). Query with SQL or q, sort and filter, chart, analyze and
+ export.
+
+Package: datui
+Version: 0.4.14-1
+Architecture: amd64
+Maintainer: Derek Wisong
+Installed-Size: 110937
+Depends: libc6 (>= 2.28)
+Filename: ./datui_0.4.14-1_amd64.deb
+Size: 26891792
+MD5sum: ee5bc57f38d3fcb3ab76b4abfd0c7eec
+SHA1: 608cbf6090a44b230e48946d4d403835c355ec4e
+SHA256: 35a7ade42e6ea7854a7ddadab5eabb23877246c77ef716140a45fb2583549e08
+Priority: optional
+Homepage: https://derekwisong.github.io/datui
+Description: Explore tabular data in your terminal: Parquet, CSV, JSON and more
+ Parquet, CSV, JSON, Arrow, Excel, SQLite, logs, audio, model files and more,
+ including binary formats you describe in a format spec. On disk or in S3, GCS,
+ Azure and HTTP(S). Query with SQL or q, sort and filter, chart, analyze and
+ export.
+
